@@ -56,7 +56,7 @@ namespace platzi_asp_net_core
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Escuela}/{action=Index}/{id?}");
             });
         }
     }

@@ -36,11 +36,19 @@ namespace platzi_asp_net_core
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
-            services.AddDbContext<EscuelaContext>(
-                options => options.UseInMemoryDatabase(databaseName:"testDB" )
-            );
+            // services.AddDbContext<EscuelaContext>(
+            //     options => options.UseInMemoryDatabase(databaseName: "testDB")
+            // );
 
-            
+            string connString = ConfigurationExtensions
+                	                .GetConnectionString(this.Configuration, 
+                                    "DefaultConnectionString" );
+
+            services.AddDbContext<EscuelaContext>(
+                    options => options.UseSqlServer(connString)
+                );
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

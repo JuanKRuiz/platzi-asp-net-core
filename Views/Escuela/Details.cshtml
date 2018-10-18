@@ -1,0 +1,54 @@
+@model platzi_asp_net_core.Models.Escuela
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Escuela</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.AñoDeCreación)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AñoDeCreación)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Pais)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Pais)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Ciudad)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Ciudad)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Dirección)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Dirección)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TipoEscuela)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TipoEscuela)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

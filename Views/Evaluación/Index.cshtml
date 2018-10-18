@@ -1,4 +1,4 @@
-@model IEnumerable<platzi_asp_net_core.Models.Escuela>
+@model IEnumerable<platzi_asp_net_core.Models.Evaluación>
 
 @{
     ViewData["Title"] = "Index";
@@ -13,19 +13,13 @@
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.AñoDeCreación)
+                @Html.DisplayNameFor(model => model.Alumno)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Pais)
+                @Html.DisplayNameFor(model => model.Asignatura)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Ciudad)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Dirección)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TipoEscuela)
+                @Html.DisplayNameFor(model => model.Nota)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Nombre)
@@ -37,19 +31,13 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.AñoDeCreación)
+                @Html.DisplayFor(modelItem => item.Alumno.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Pais)
+                @Html.DisplayFor(modelItem => item.Asignatura.Id)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Ciudad)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Dirección)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.TipoEscuela)
+                @Html.DisplayFor(modelItem => item.Nota)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Nombre)

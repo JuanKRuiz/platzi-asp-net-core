@@ -1,0 +1,42 @@
+@model platzi_asp_net_core.Models.Evaluación
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Evaluación</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Alumno)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Alumno.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Asignatura)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Asignatura.Id)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nota)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nota)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

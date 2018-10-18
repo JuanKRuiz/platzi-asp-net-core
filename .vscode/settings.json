@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/566e8de7-1467-4acc-8826-0b5abc5e0279/resourceGroups/appsvc_rg_windows_centralus/providers/Microsoft.Web/sites/platzi-asp",
+    "appService.deploySubpath": ""
+}
